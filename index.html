@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARAD Reward</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: #ffe600;
+      padding: 20px;
+    }
+    header img {
+      height: 50px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    header h1 {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+    .step {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+    .step h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 400px;
+    }
+    .video-container, .share-buttons, .confirmation {
+      width: 80%;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #e0e0e0;
+      border-radius: 10px;
+    }
+    .share-buttons button {
+      display: inline-block;
+      margin: 10px;
+      width: auto;
+    }
+    footer {
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+    iframe {
+      width: 100%;
+      height: 215px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Ooredoo_logo_2022.svg/512px-Ooredoo_logo_2022.svg.png" alt="Ooredoo" />
+    <img src="https://dummyimage.com/150x50/000/fff.png&text=PARAD+LOGO" alt="PARAD" />
+    <h1>✨ Gagnez jusqu’à 100 DZD avec PARAD et Ooredoo</h1>
+  </header>
+
+  <section class="step">
+    <h2>1. Vérifiez votre numéro</h2>
+    <input type="tel" value="+213770904010" disabled /><br />
+    <button>Code envoyé</button>
+    <input type="text" value="✔️ Vérifié par WhatsApp" disabled /><br />
+  </section>
+
+  <section class="step">
+    <h2>2. Regardez cette annonce sponsorisée</h2>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/ASZAzlRvh5g?autoplay=1&mute=1&controls=1" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    <button>Continuer</button>
+  </section>
+
+  <section class="step">
+    <h2>3. Partagez sur WhatsApp pour débloquer le bonus</h2>
+    <div class="share-buttons">
+      <button onclick="shareOnWhatsApp()">Partager sur WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="step confirmation">
+    <h2>4. Confirmation de réception</h2>
+    <p>✅ Merci, votre action a été enregistrée.</p>
+    <p>📩 Un message vient d’être envoyé à <strong>+213770904010</strong></p>
+    <p>💬 <em>“Félicitations ! Vous venez de recevoir 100 DZD grâce à PARAD. Rechargez, partagez, gagnez.”</em></p>
+  </section>
+
+  <footer>
+    Powered by PARAD™<br/>
+    &copy; 2025 PARAD Ultimate SARL. Tous droits réservés.
+  </footer>
+
+  <script>
+    function shareOnWhatsApp() {
+      const message = encodeURIComponent("🎁 Gagnez jusqu’à 100 DZD avec PARAD ! Cliquez ici : https://parad-reward-ooredoo.vercel.app");
+      const url = `https://api.whatsapp.com/send?phone=213770904010&text=${message}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
